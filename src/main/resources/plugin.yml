@@ -1,0 +1,4 @@
+name: spigottweaks
+version: "1.0-SNAPSHOT"
+author: Your Name
+main: co.n3fs.spigottweaks.MyPlugin
