@@ -41,7 +41,6 @@ public class BlockUtils {
         for (BlockFace face : BlockFace.values()) {
             nextBlock = block.getRelative(face);
             if (nextBlock.getType().equals(material) && !blocks.contains(nextBlock)) {
-                blocks.add(nextBlock);
                 getNearbyBlocksOfMaterial(nextBlock, material);
             }
         }
