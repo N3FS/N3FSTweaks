@@ -16,7 +16,8 @@ public class BlockUtils {
     /**
      * Get all nearby blocks of the same material. It's recommended that you don't use this for blocks which are likely
      * to be near many (or an infinite number of) other blocks of the same material.
-     * @param block
+     *
+     * @param block Block to get nearby blocks
      * @return
      */
     public static HashSet<Block> getNearbyMatchingBlocks(Block block) {
@@ -27,8 +28,8 @@ public class BlockUtils {
      * Get all nearby blocks of a specified material. It's recommended that you don't use this for blocks which are
      * likely to be near many (or an infinite number of) other blocks of the specified material (ie dirt).
      *
-     * @param block
-     * @param material
+     * @param block Block to get nearby blocks
+     * @param material Material which blocks must be
      * @return
      */
     public static HashSet<Block> getNearbyBlocksOfMaterial(Block block, Material material) {
