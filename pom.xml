@@ -4,7 +4,7 @@
 
     <artifactId>spigottweaks</artifactId>
     <groupId>co.n3fs</groupId>
-    <version>0.1-SNAPSHOT</version>
+    <version>0.1</version>
     
     <!-- Repositories -->
     <repositories>
