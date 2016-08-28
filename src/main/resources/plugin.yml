@@ -2,3 +2,17 @@ name: N3FSTweaks
 version: "${project.version}"
 author: md678685
 main: co.n3fs.spigottweaks.N3FSTweaks
+permissions:
+    n3fs.*:
+        description: Grants access to all N3FSTweaks features.
+        children:
+            n3fs.spectator.*: true
+            n3fs.spectator.tp: true
+    n3fs.spectator.*:
+        default: op
+        description: Grants access to all spectator mode features.
+        children:
+            n3fs.spectator.tp: true
+    n3fs.spectator.tp:
+        default: op
+        description: Allows players to teleport via the spectator mode menu.
