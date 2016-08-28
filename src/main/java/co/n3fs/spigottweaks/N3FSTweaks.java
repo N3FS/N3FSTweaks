@@ -1,6 +1,7 @@
 package co.n3fs.spigottweaks;
 
 import co.n3fs.spigottweaks.listener.PlayerListener;
+import org.bukkit.event.HandlerList;
 import org.bukkit.plugin.java.JavaPlugin;
 
 public class N3FSTweaks extends JavaPlugin {
@@ -12,7 +13,7 @@ public class N3FSTweaks extends JavaPlugin {
 
     @Override
     public void onDisable() {
-        
+        HandlerList.unregisterAll(this);
     }
 
 }
