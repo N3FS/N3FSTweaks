@@ -8,6 +8,8 @@ import org.bukkit.event.EventHandler;
 import org.bukkit.event.EventPriority;
 import org.bukkit.event.Listener;
 import org.bukkit.event.player.PlayerInteractEvent;
+import org.bukkit.event.player.PlayerTeleportEvent;
+import org.bukkit.event.player.PlayerTeleportEvent.TeleportCause;
 
 import java.util.Collection;
 
@@ -31,6 +33,13 @@ public class PlayerListener implements Listener {
             for (Block block : redstoneOreBlocks) {
                 block.setType(Material.GLOWING_REDSTONE_ORE);
             }
+        }
+    }
+
+    @EventHandler(priority = EventPriority.HIGHEST)
+    public void onPlayerTeleport(final PlayerTeleportEvent event) {
+        if (event.getCause().equals(TeleportCause.SPECTATE)) {
+            if (!event.getPlayer().hasPermission("n3fs.spectator.tp")) event.setCancelled(true);
         }
     }
 
