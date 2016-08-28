@@ -7,7 +7,6 @@ import org.bukkit.block.Block;
 import org.bukkit.event.EventHandler;
 import org.bukkit.event.EventPriority;
 import org.bukkit.event.Listener;
-import org.bukkit.event.block.Action;
 import org.bukkit.event.player.PlayerInteractEvent;
 
 import java.util.HashSet;
@@ -27,7 +26,7 @@ public class PlayerListener implements Listener {
 
     @EventHandler(priority = EventPriority.MONITOR, ignoreCancelled = true)
     public void onPlayerInteract(final PlayerInteractEvent event) {
-        if (event.getClickedBlock().getType().equals(Material.REDSTONE_ORE) && event.getAction().equals(Action.PHYSICAL)) {
+        if (event.getClickedBlock().getType().equals(Material.REDSTONE_ORE)) {
             HashSet<Block> redstoneOreBlocks = BlockUtils.getNearbyMatchingBlocks(event.getClickedBlock());
             for (Block block : redstoneOreBlocks) {
                 block.setType(Material.GLOWING_REDSTONE_ORE);
